@@ -13,7 +13,11 @@
 
 ## README
 
+The file you are reading now. It is good practice to update this file as you go along.
+
 ### .gitignore
+
+Always add this file to the root of your repository. 
 
 - .DS_Store
 - node_modules
