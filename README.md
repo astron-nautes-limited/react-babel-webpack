@@ -15,11 +15,17 @@ Follow along with [React &amp; Webpack 4 From Scratch](https://www.youtube.com/w
 
 ## Git
 
-### From scratch
+Choose your own adventure.
+
+### GitHub From scratch
+
+These instructions are intended to be a step-by-step guide. This is an effective way to learn about components and integrations. Sharing is good practice.
 
 `git init`
 
 ### From clone
+
+Sometimes you just need the files. Clone this repository and install npm.   
 
 ```shell
 git clone https://github.com/astron-nautes-limited/react-babel-webpack.git
@@ -28,14 +34,22 @@ npm install
 
 ## README
 
-The file you are reading now. It is good practice to update this file as you go along.
+Like the file you are reading. Create it now and update as you go along.
+
+Create `README.md` file at `root`
 
 ### .gitignore
 
-Always add this file to the root of your repository. 
+There are some files Git needs to ignore. Always add this file to the root of your repository. 
 
-- .DS_Store
-- node_modules
+Create `.gitignore` file at `root`
+
+Add code to `.gitignore`
+
+```shell
+.DS_Store
+node_modules
+```
 
 ## Node Package Manager
 
