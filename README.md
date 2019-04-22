@@ -30,8 +30,8 @@ Always add this file to the root of your repository.
 
     npm install react react-dom
 
-- react
-- react-dom
+- [react](https://reactjs.org/docs/react-api.html)
+- [react-dom](https://reactjs.org/docs/react-dom.html)
 
 ## dev Dependencies
 
