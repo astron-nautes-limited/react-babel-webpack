@@ -1,3 +1,7 @@
+# React Boilerplate
+
+Project creating [boilerplate](https://medium.freecodecamp.org/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7) [React](https://reactjs.org/) application with [webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
+
 ## Prerequisites
 
 - Terminal
@@ -6,14 +10,17 @@
 - Node
 
 ## Git
-From scratch
 
-    git init
+### From scratch
 
-From clone
+`git init`
 
-    git clone https://github.com/astron-nautes-limited/react-babel-webpack.git
-    npm install
+### From clone
+
+```shell
+git clone https://github.com/astron-nautes-limited/react-babel-webpack.git
+npm install
+```
 
 ## README
 
@@ -28,20 +35,20 @@ Always add this file to the root of your repository.
 
 ## Node Package Manager
 
-    npm init
+`npm init`
 
 ## Dependencies
 
-    npm install react react-dom
+`npm install react react-dom`
 
 - [react](https://reactjs.org/docs/react-api.html)
 - [react-dom](https://reactjs.org/docs/react-dom.html)
 
-## dev Dependencies
+## Dev Dependencies
 
 ### Webpack
 
-    npm install -D webpack webpack-cli webpack-dev-server html-webpack-plugin
+`npm install -D webpack webpack-cli webpack-dev-server html-webpack-plugin`
 
 - webpack
 - webpack-cli
@@ -50,13 +57,12 @@ Always add this file to the root of your repository.
 
 #### [Webpack Config](https://webpack.js.org/configuration/)
 
-Create file in root directory
+Create `webpack.config.js` file at `root`
 
-    webpack.config.js
+Add code to `webpack.config.js`
 
-Add code to webpack.config.js
-
-    const path = require('path');
+```jsx
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -77,20 +83,21 @@ module.exports = {
         ]
     }
 }
+```
 
-Create directory in root directory
+Create `src` directory at `root` 
 
-    src
+Create `index.js` file in `src` directory
 
-Create file in src directory
+#### [HTML Webpack Plugin](https://github.com/jantimon/html-webpack-plugin)
 
-    index.js
+##### Writing Your Own HTML Webpack Templates
 
-[HTML Webpack Plugin](https://github.com/jantimon/html-webpack-plugin)
+Create `index.html` file in `src` directory
 
 ### Babel
 
-    npm install -D @babel/core @babel/preset-env @babel/preset-react babel-loader
+`npm install -D @babel/core @babel/preset-env @babel/preset-react babel-loader`
 
 - @babel/core
 - @babel/preset-env
