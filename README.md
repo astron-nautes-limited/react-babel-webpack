@@ -1,13 +1,13 @@
 # React Boilerplate
 
-Project creating [boilerplate](https://medium.freecodecamp.org/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7) [React](https://reactjs.org/) application with [webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
+Project creating [React](https://reactjs.org/) application [boilerplate](https://medium.freecodecamp.org/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7) with [webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
 
 ## Prerequisites
 
 - Terminal
 - Git
+- Node, NPM
 - HTML, CSS, JS
-- Node
 
 ## Git
 
@@ -46,7 +46,7 @@ Always add this file to the root of your repository.
 
 ## Dev Dependencies
 
-### Webpack
+### [Webpack](https://webpack.js.org)
 
 `npm install -D webpack webpack-cli webpack-dev-server html-webpack-plugin`
 
@@ -66,7 +66,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js'
+    mode: 'development',
+    entry: './src/index.js',
     output: {
         path: path.join(__dirname, '/dist')
         filename: 'bundle.js'
@@ -81,7 +82,15 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    devServer: {
+        contentBase: './dist'
+      },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        })
+    ]
 }
 ```
 
@@ -95,6 +104,25 @@ Create `index.js` file in `src` directory
 
 Create `index.html` file in `src` directory
 
+Update code in `package.json`
+
+Replace
+
+```shell
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+
+With
+
+```shell
+ "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production" 
+  },
+```
+
 ### Babel
 
 `npm install -D @babel/core @babel/preset-env @babel/preset-react babel-loader`
@@ -104,6 +132,51 @@ Create `index.html` file in `src` directory
 - @babel/preset-react
 - [babel-loader](https://github.com/babel/babel-loader)
 
-'.babelrc'
+Create `.babelrc` file at `root`
 
-'npm start'
+Add code to `.babelrc`
+
+```shell
+{
+    "presets": ["env", "react"]
+}
+```
+
+Create `components` directory at `src` 
+
+Create `App.js` file in `components` 
+
+Add code to `App.js`
+
+```jsx
+import React, { Component } from 'react';
+
+class App extends Component {
+    render() {
+        return(
+            <div>
+                <h1>Chemical Reaction</h1>
+                <p>Process leading transformation of chemical substances into other chemicals.</p>
+            </div>
+        );
+    }
+}
+
+export default App;
+```
+
+Add code to `index.js`
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
+
+ReactDOM.render(<App />, document.getElementById('app'));
+```
+
+`npm start`
+
+## Errors
+
+- [Complete log of npm start run on React Boilerplate project](https://gist.github.com/earth2travis/ba2d2a07358107edf4455feaf9c080a9)
