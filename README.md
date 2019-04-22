@@ -2,9 +2,7 @@
 
 Project creating [React](https://reactjs.org/) application [boilerplate](https://medium.freecodecamp.org/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7) with [webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
 
-<img src="src/img/react-logo.png" width="100">
-<img src="src/img/webpack-logo.png" width="100">
-<img src="src/img/babel-logo.png" width="100">
+<img src="src/img/react-logo.png" width="100"><img src="src/img/webpack-logo.png" width="100"><img src="src/img/babel-logo.png" width="100">
 
 Follow along with [React &amp; Webpack 4 From Scratch](https://www.youtube.com/watch?v=deyxI-6C2u4) tutorial on YouTube.
 
